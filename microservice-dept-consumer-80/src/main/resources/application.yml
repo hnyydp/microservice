@@ -1,0 +1,4 @@
+server:
+  context-path: /
+  port: 80
+

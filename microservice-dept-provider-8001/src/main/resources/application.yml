@@ -1,0 +1,18 @@
+server:
+  context-path: /
+  port: 8001  #配置端口
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    
+#mybatis配置
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml     # mybatis配置文件
+  type-aliases-package:  org.pu.dept.entity               # entity别名所在类
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml                     # mapper映射文件    
+
