@@ -46,10 +46,35 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	<!-- 解析resources下配置信息插件 -->
+	<build>
+		<finalName>microservicecloud</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimit>$</delimit>
+					</delimiters>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<modules>
 		<module>microservice-common</module>
 		<module>microservice-dept-provider-8001</module>
 		<module>microservice-dept-consumer-80</module>
+		<module>microservice-eureka-server-5001</module>
+		<module>microservice-eureka-server-5002</module>
+		<module>microservice-eureka-server-5003</module>
 	</modules>
 </project>

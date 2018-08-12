@@ -3,6 +3,8 @@ server:
   port: 8001  #配置端口
   
 spring:
+  application:
+    name: microservice-dept  #服务名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&characterEncoding=utf-8
@@ -14,5 +16,21 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml     # mybatis配置文件
   type-aliases-package:  org.pu.dept.entity               # entity别名所在类
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                     # mapper映射文件    
-
+    - classpath:mybatis/mapper/**/*.xml                     # mapper映射文件   
+    
+eureka:
+  client: #将客户端服务注册到Eureka服务列表中
+    service-url:
+      #defaultZone: http://eureka-server-5001.com:5001/eureka  #单机
+      defaultZone: http://eureka-server-5001.com:5001/eureka,http://eureka-server-5002.com:5002/eureka,http://eureka-server-5003.com:5003/eureka
+  #主机名称修改,不加默认localhost
+  instance:
+    instance-id: microservice-dept8001  #自定义服务名称信息
+    prefer-ip-address: true #访问路径上会显示IP,当应用程序向eureka注册时，它将使用其IP地址而不是其主机名。
+    
+#定制微服务信息
+info:
+  app.name: microservice
+  app.company: www.xxx.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
