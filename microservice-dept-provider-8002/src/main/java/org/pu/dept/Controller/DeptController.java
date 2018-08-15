@@ -22,10 +22,10 @@ public class DeptController {
 
 	@Autowired
 	private DeptService deptService;
-
+	
 	@Value("${server.port}")
 	private Integer port;
-	
+
 	@GetMapping("/depts")
 	public List<Dept> depts() {
 		//添加端口信息

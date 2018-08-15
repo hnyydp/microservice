@@ -18,7 +18,9 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class DeptConsumerController {
 
-	private final static String URL_PREFIX = "http://localhost:8001";
+//	private final static String URL_PREFIX = "http://localhost:8001";
+	//Euraka整合Ribbon配置OK后就可以使用服务实例名访问，不需要提供IP和端口
+	private final static String URL_PREFIX = "http://MICROSERVICE-DEPT";
 
 	@Autowired
 	private RestTemplate restTemplate;
