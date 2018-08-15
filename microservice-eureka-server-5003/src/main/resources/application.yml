@@ -12,4 +12,4 @@ eureka:
       #设置与Eureka Server交互的地址,查询服务和注册服务都需要依赖这个地址（单机）。
       #defaultZone: http://${eureka.instance.appname}:${server.port}/eureka/
       #集群配置,相互注册
-      defaultZone: http://eureka-server-5002.com:5002/eureka/,http://eureka-server-5001.com:5001/eureka/
+      defaultZone: http://eureka-server-5001.com:5001/eureka/,http://eureka-server-5002.com:5002/eureka/

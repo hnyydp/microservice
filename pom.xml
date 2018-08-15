@@ -78,5 +78,6 @@
 		<module>microservice-eureka-server-5003</module>
 		<module>microservice-dept-provider-8002</module>
 		<module>microservice-dept-provider-8003</module>
+		<module>microservice-dept-consumer-feign</module>
 	</modules>
 </project>

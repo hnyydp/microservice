@@ -23,6 +23,12 @@
 			<artifactId>jackson-databind</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- Feign -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
 
 	</dependencies>
 

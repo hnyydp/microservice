@@ -1,10 +1,13 @@
 server:
   context-path: /
   port: 80
+  
+spring:
+  application:
+    name: microservice-dept-consumer-feign  #服务名
 
 eureka:
   client:
-    register-with-eureka: false   #false表示不向注册中心注册自己,因为本身应用就是注册中心
     service-url:
       #集群配置
       defaultZone: http://eureka-server-5001.com:5001/eureka/,http://eureka-server-5002.com:5002/eureka/,http://eureka-server-5003.com:5003/eureka/
