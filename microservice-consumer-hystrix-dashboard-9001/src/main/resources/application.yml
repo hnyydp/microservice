@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: microservice-hystrix-dashboard
+    
+server:
+  context-path: /
+  port: 9001

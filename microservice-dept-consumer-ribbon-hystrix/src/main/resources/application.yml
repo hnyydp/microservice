@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-dept-consumer
+    name: microservice-dept-consumer-ribbon-hystrix
 server:
   context-path: /
   port: 80

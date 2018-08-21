@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: microservice-hystrix-dashboard-turbine
+    
+server:
+  context-path: /
+  port: 9002
+  
+eureka:
+  client:
+    service-url:
+      #集群配置
+      defaultZone: http://eureka-server-5001.com:5001/eureka/,http://eureka-server-5002.com:5002/eureka/,http://eureka-server-5003.com:5003/eureka/
+
+turbine:
+  app-config: microservice-dept-consumer-ribbon-hystrix   #监控哪些服务,多个用“,”分割
+  cluster-name-expression: new String("default")  #指定了集群名称为default
+  aggregator:
+    cluster-config: default  #指定聚合哪些集群，多个使用","分割，默认为default。可使用
+    

@@ -5,10 +5,11 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 @SuppressWarnings("serial")
 @Data
-//@Accessors(chain=true) //链式风格
+@Accessors(chain=true) //链式风格
 public class Dept implements Serializable {
 	private Integer deptId;
 	private String deptName;

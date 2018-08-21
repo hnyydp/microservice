@@ -5,9 +5,17 @@ server:
 spring:
   application:
     name: microservice-dept-consumer-feign  #服务名
+    
+# To disable Hystrix in Feign
+feign: 
+  hystrix: 
+    enabled: true
 
 eureka:
   client:
     service-url:
       #集群配置
       defaultZone: http://eureka-server-5001.com:5001/eureka/,http://eureka-server-5002.com:5002/eureka/,http://eureka-server-5003.com:5003/eureka/
+  instance:
+    instance-id: microservice-dept-consumer-feign80  #自定义服务名称信息
+    prefer-ip-address: true #访问路径上会显示IP,当应用程序向eureka注册时，它将使用其IP地址而不是其主机名。
