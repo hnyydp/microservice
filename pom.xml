@@ -82,5 +82,6 @@
 		<module>microservice-consumer-hystrix-dashboard-9001</module>
 		<module>microservice-dept-consumer-ribbon-hystrix</module>
 		<module>microservice-hystrix-dashboard-turbine-9002</module>
+		<module>microservice-zuul-9003</module>
 	</modules>
 </project>
