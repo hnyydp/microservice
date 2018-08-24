@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: microservice-dept-provider-config     #github上读取资源名称
+      profile: prod       #环境
+      label: master       #远程仓库的分支
+      uri: http://localhost:7001/    #服务配置中心的网址
+

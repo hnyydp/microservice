@@ -83,5 +83,9 @@
 		<module>microservice-dept-consumer-ribbon-hystrix</module>
 		<module>microservice-hystrix-dashboard-turbine-9002</module>
 		<module>microservice-zuul-9003</module>
+		<module>microservice-config-server-7001</module>
+		<module>microservice-config-client-7002</module>
+		<module>microservice-config-eureka-server-5001</module>
+		<module>microservice-config-dept-provider-8001</module>
 	</modules>
 </project>

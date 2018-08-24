@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: microservice-config-dept  #服务名
